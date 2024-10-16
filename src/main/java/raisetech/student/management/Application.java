@@ -28,9 +28,9 @@ public class Application {
 
 		StringBuilder result = new StringBuilder();
 		for (Student student : students) {
-			result.append(student.getName())
+			result.append(student.getName())  // 学生の名前を取得
 					.append(" ")
-					.append(student.getAge())
+					.append(student.getAge())  // StudentクラスのgetAgeメソッドを使用
 					.append("歳\n");
 		}
 

@@ -5,8 +5,6 @@ import java.util.List;
 
 @Mapper
 public interface StudentRepository {
-
-    // 名前で学生を検索
     //@Select("SELECT * FROM student WHERE name = #{name}")
     //Student searchByName(String name);
 
@@ -20,11 +18,9 @@ public interface StudentRepository {
     // 学生の登録
     @Insert("INSERT INTO student (name, age) VALUES (#{name}, #{age})")
     void registerStudent(String name, int age);
-
     // 学生の年齢を更新
     @Update("UPDATE student SET age = #{age} WHERE name = #{name}")
     void updateStudent(String name, int age);
-
     // 学生の削除
     @Delete("DELETE FROM student WHERE name = #{name}")
     void deleteStudent(String name);
