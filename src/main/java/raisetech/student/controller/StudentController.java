@@ -6,26 +6,29 @@ import org.springframework.web.bind.annotation.RestController;
 import raisetech.student.data.Student;
 import raisetech.student.data.StudentCourse;
 import raisetech.student.service.StudentService;
-
 import java.util.List;
 
 @RestController
-public class StudentController {
+public
+class StudentController {
 
     private StudentService service;
 
     @Autowired
-    public StudentController(StudentService service) {
-                this.service = service;
-            }
+    public
+    StudentController(StudentService service) {
+        this.service = service;
+    }
 
     @GetMapping("/studentList")
-    public List<Student> getStudentList() {
-        return service.serchStudentList();
+    public
+    List<Student> getStudentList() {
+        return service.searchStudentList();
     }
 
     @GetMapping("/studentCourseList")
-    public List<StudentCourse> getStudentCourseList() {
+    public
+    List<StudentCourse> getStudentCourseList() {
         return service.searchCourseList();
     }
 }
